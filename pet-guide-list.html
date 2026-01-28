@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ペット図鑑 - PetLife</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2310b981' viewBox='0 0 16 16'><path d='M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z'/><path d='M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132'/></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -34,6 +35,10 @@
             color: var(--brown-color) !important;
             font-weight: 500;
             margin: 0 10px;
+        }
+
+        .nav-link.active {
+            color: var(--primary-color) !important;
         }
         
         .page-header {
@@ -135,8 +140,6 @@
         
         footer {
             background-color: var(--brown-color);
-            color: white;
-            padding: 40px 0;
             margin-top: 80px;
             border-radius: 50px 50px 0 0;
         }
@@ -146,7 +149,7 @@
     <!-- ナビゲーションバー -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.html">
                 <i class="bi bi-heart-fill text-danger"></i> PetLife
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -155,24 +158,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ホーム</a>
+                        <a class="nav-link" href="./index.html">ホーム</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">ペット図鑑</a>
+                        <a class="nav-link active" href="./pet-guide-list.html">ペット図鑑</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">飼い方ガイド</a>
+                        <a class="nav-link" href="./pet-care-guide.html">飼い方ガイド</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Q&A</a>
+                        <a class="nav-link" href="./pet-guide-qa.html">Q&A</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">飼育記録</a>
+                        <a class="nav-link" href="pet-guide-record.html">飼育記録</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-success ms-3 rounded-pill fw-bold">
+                <a href="./pet-guide-login.html" class="btn btn-outline-success ms-3 rounded-pill fw-bold">
                     <i class="bi bi-person-circle"></i> ログイン
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -337,7 +340,7 @@
             <!-- ペット一覧 -->
             <div class="col-lg-9">
                 <!-- カテゴリクイックフィルター -->
-                <div class="category-filter">
+                <div class="category-filter mt-lg-0 mt-4">
                     <button class="category-btn active">すべて</button>
                     <button class="category-btn">🐕 犬</button>
                     <button class="category-btn">🐈 猫</button>
@@ -378,7 +381,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -402,7 +405,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -426,7 +429,7 @@
                                         <strong style="color: var(--secondary-color);">普通</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -450,7 +453,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -474,7 +477,7 @@
                                         <strong style="color: var(--secondary-color);">普通</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -498,7 +501,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -522,7 +525,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -546,7 +549,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -570,7 +573,7 @@
                                         <strong style="color: var(--secondary-color);">活発</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-success w-100 rounded-pill">
+                                <button class="btn btn-outline-success w-100 rounded-pill" onclick="location.href='./pet-guide-detail.html'">
                                     詳細を見る <i class="bi bi-arrow-right"></i>
                                 </button>
                             </div>
@@ -601,7 +604,8 @@
     </div>
 
     <!-- フッター -->
-    <footer>
+
+    <footer class="text-white pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -629,10 +633,10 @@
                 <div class="col-md-4 mb-4">
                     <h6 class="fw-bold mb-3">フォローする</h6>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/moriko_iwate" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.instagram.com/therock/" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtu.be/ge3Pj03x8Zw?t=66" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/DwayneJohnson/" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>柴犬 - PetLife</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2310b981' viewBox='0 0 16 16'><path d='M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z'/><path d='M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132'/></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -12,57 +14,57 @@
             --secondary-color: #f59e0b;
             --brown-color: #78350f;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fef3c7;
         }
-        
+
         .navbar {
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .navbar-brand {
             font-weight: bold;
             color: var(--primary-color) !important;
             font-size: 1.5rem;
         }
-        
+
         .carousel-item img {
             height: 450px;
             object-fit: cover;
             border-radius: 30px;
         }
-        
+
         .pet-header {
             background: white;
             border-radius: 30px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             margin: -80px 0 30px 0;
             position: relative;
             z-index: 1;
         }
-        
+
         .info-card {
             background: white;
             border-radius: 25px;
             padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
         }
-        
+
         .accordion-button:not(.collapsed) {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
         }
-        
+
         .accordion-button {
             border-radius: 20px !important;
             font-weight: bold;
         }
-        
+
         .stat-badge {
             background: #dcfce7;
             color: var(--primary-color);
@@ -70,44 +72,59 @@
             border-radius: 20px;
             text-align: center;
         }
-        
+
         .sidebar-card {
             background: white;
             border-radius: 25px;
             padding: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            position: sticky;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             top: 20px;
             margin-bottom: 20px;
         }
-        
+
         footer {
             background-color: var(--brown-color);
-            color: white;
-            padding: 40px 0;
             margin-top: 80px;
             border-radius: 50px 50px 0 0;
         }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="bi bi-heart-fill text-danger"></i> PetLife</a>
+            <a class="navbar-brand" href="./index.html">
+                <i class="bi bi-heart-fill text-danger"></i> PetLife
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">ホーム</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">ペット図鑑</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">飼い方ガイド</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Q&A</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">飼育記録</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./pet-guide-list.html">ペット図鑑</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pet-care-guide.html">飼い方ガイド</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pet-guide-qa.html">Q&A</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pet-guide-record.html">飼育記録</a>
+                    </li>
                 </ul>
-                <button class="btn btn-outline-success ms-3 rounded-pill fw-bold">
+                <a href="./pet-guide-login.html" class="btn btn-outline-success ms-3 rounded-pill fw-bold">
                     <i class="bi bi-person-circle"></i> ログイン
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -115,9 +132,9 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">ホーム</a></li>
-                <li class="breadcrumb-item"><a href="#">ペット図鑑</a></li>
-                <li class="breadcrumb-item"><a href="#">犬</a></li>
+                <li class="breadcrumb-item"><a href="./index.html">ホーム</a></li>
+                <li class="breadcrumb-item"><a href="./pet-guide-list.html">ペット図鑑</a></li>
+                <li class="breadcrumb-item"><a href="./pet-guide-list.html">犬</a></li>
                 <li class="breadcrumb-item active">柴犬</li>
             </ol>
         </nav>
@@ -130,13 +147,16 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://placehold.co/1200x450/10b981/ffffff?text=Shiba+Inu+1" class="d-block w-100" alt="柴犬1">
+                    <img src="https://placehold.co/1200x450/10b981/ffffff?text=Shiba+Inu+1" class="d-block w-100"
+                        alt="柴犬1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1200x450/f59e0b/ffffff?text=Shiba+Inu+2" class="d-block w-100" alt="柴犬2">
+                    <img src="https://placehold.co/1200x450/f59e0b/ffffff?text=Shiba+Inu+2" class="d-block w-100"
+                        alt="柴犬2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1200x450/fb923c/ffffff?text=Shiba+Inu+3" class="d-block w-100" alt="柴犬3">
+                    <img src="https://placehold.co/1200x450/fb923c/ffffff?text=Shiba+Inu+3" class="d-block w-100"
+                        alt="柴犬3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
@@ -150,13 +170,16 @@
         <div class="pet-header">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <span class="badge" style="background: #dcfce7; color: #10b981; padding: 10px 20px; border-radius: 50px; font-size: 1rem;">初心者向け</span>
+                    <span class="badge"
+                        style="background: #dcfce7; color: #10b981; padding: 10px 20px; border-radius: 50px; font-size: 1rem;">初心者向け</span>
                     <h1 class="display-4 fw-bold mt-3 mb-3" style="color: var(--brown-color);">柴犬</h1>
                     <p class="lead text-muted">忠実で賢く、家族思いの日本原産の犬種</p>
                 </div>
                 <div class="col-md-4 text-md-end">
-                    <button class="btn btn-success btn-lg rounded-pill mb-2 w-100"><i class="bi bi-heart"></i> お気に入り</button>
-                    <button class="btn btn-outline-warning btn-lg rounded-pill w-100"><i class="bi bi-share"></i> シェア</button>
+                    <button class="btn btn-success btn-lg rounded-pill mb-2 w-100"><i class="bi bi-heart"></i>
+                        お気に入り</button>
+                    <button class="btn btn-outline-warning btn-lg rounded-pill w-100"><i class="bi bi-share"></i>
+                        シェア</button>
                 </div>
             </div>
         </div>
@@ -164,20 +187,31 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="info-card">
-                    <h3 class="fw-bold mb-4" style="color: var(--brown-color);"><i class="bi bi-info-circle-fill text-success"></i> 基本情報</h3>
+                    <h3 class="fw-bold mb-4" style="color: var(--brown-color);"><i
+                            class="bi bi-info-circle-fill text-success"></i> 基本情報</h3>
                     <div class="row g-3 mb-4">
-                        <div class="col-md-3"><div class="stat-badge"><strong>サイズ</strong><br>中型</div></div>
-                        <div class="col-md-3"><div class="stat-badge"><strong>体重</strong><br>8-11kg</div></div>
-                        <div class="col-md-3"><div class="stat-badge"><strong>寿命</strong><br>12-15年</div></div>
-                        <div class="col-md-3"><div class="stat-badge"><strong>原産地</strong><br>日本</div></div>
+                        <div class="col-md-3">
+                            <div class="stat-badge"><strong>サイズ</strong><br>中型</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-badge"><strong>体重</strong><br>8-11kg</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-badge"><strong>寿命</strong><br>12-15年</div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-badge"><strong>原産地</strong><br>日本</div>
+                        </div>
                     </div>
-                    <p>柴犬は日本原産の小型から中型の犬種で、国の天然記念物に指定されています。忠実で勇敢な性格を持ち、家族に対して深い愛情を示します。独立心が強く、時に頑固な一面もありますが、適切なしつけを行えば素晴らしいパートナーとなります。</p>
+                    <p>柴犬は日本原産の小型から中型の犬種で、国の天然記念物に指定されています。忠実で勇敢な性格を持ち、家族に対して深い愛情を示します。独立心が強く、時に頑固な一面もありますが、適切なしつけを行えば素晴らしいパートナーとなります。
+                    </p>
                 </div>
 
                 <div class="accordion mb-4" id="petAccordion">
                     <div class="accordion-item mb-3" style="border: none; border-radius: 20px;">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#character">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#character">
                                 <i class="bi bi-heart me-2"></i> 性格・特徴
                             </button>
                         </h2>
@@ -203,7 +237,8 @@
 
                     <div class="accordion-item mb-3" style="border: none; border-radius: 20px;">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#care">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#care">
                                 <i class="bi bi-clipboard-heart me-2"></i> 飼い方・ケア
                             </button>
                         </h2>
@@ -228,7 +263,8 @@
 
                     <div class="accordion-item mb-3" style="border: none; border-radius: 20px;">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#health">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#health">
                                 <i class="bi bi-heart-pulse me-2"></i> 健康管理
                             </button>
                         </h2>
@@ -254,7 +290,8 @@
 
                     <div class="accordion-item" style="border: none; border-radius: 20px;">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#training">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#training">
                                 <i class="bi bi-award me-2"></i> しつけ
                             </button>
                         </h2>
@@ -282,7 +319,8 @@
 
             <div class="col-lg-4">
                 <div class="sidebar-card">
-                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);"><i class="bi bi-star-fill text-warning"></i> 飼いやすさ評価</h5>
+                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);"><i
+                            class="bi bi-star-fill text-warning"></i> 飼いやすさ評価</h5>
                     <div class="mb-3">
                         <div class="d-flex justify-content-between mb-2"><span>初心者向け</span><strong>★★★★☆</strong></div>
                         <div class="progress" style="height: 10px; border-radius: 10px;">
@@ -310,10 +348,14 @@
                 </div>
 
                 <div class="sidebar-card">
-                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);"><i class="bi bi-cash-coin"></i> 飼育費用の目安</h5>
-                    <div class="mb-2 d-flex justify-content-between"><span>初期費用</span><strong>¥150,000〜¥300,000</strong></div>
-                    <div class="mb-2 d-flex justify-content-between"><span>月額費用</span><strong>¥15,000〜¥25,000</strong></div>
-                    <div class="mb-2 d-flex justify-content-between"><span>年間医療費</span><strong>¥50,000〜¥100,000</strong></div>
+                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);"><i class="bi bi-cash-coin"></i> 飼育費用の目安
+                    </h5>
+                    <div class="mb-2 d-flex justify-content-between"><span>初期費用</span><strong>¥150,000〜¥300,000</strong>
+                    </div>
+                    <div class="mb-2 d-flex justify-content-between"><span>月額費用</span><strong>¥15,000〜¥25,000</strong>
+                    </div>
+                    <div class="mb-2 d-flex justify-content-between"><span>年間医療費</span><strong>¥50,000〜¥100,000</strong>
+                    </div>
                 </div>
 
                 <div class="sidebar-card">
@@ -330,11 +372,13 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="text-white pt-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-heart-fill text-danger"></i> PetLife</h5>
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-heart-fill text-danger"></i> PetLife
+                    </h5>
                     <p>ペットとの幸せな暮らしを応援する情報サイト</p>
                 </div>
                 <div class="col-md-2 mb-4">
@@ -356,10 +400,10 @@
                 <div class="col-md-4 mb-4">
                     <h6 class="fw-bold mb-3">フォローする</h6>
                     <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/moriko_iwate" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.instagram.com/therock/" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtu.be/ge3Pj03x8Zw?t=66" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/DwayneJohnson/" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -370,4 +414,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetLife - 飼育記録・健康管理</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2310b981' viewBox='0 0 16 16'><path d='M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z'/><path d='M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132'/></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -254,8 +255,6 @@
         
         footer {
             background-color: var(--brown-color);
-            color: white;
-            padding: 40px 0;
             margin-top: 80px;
             border-radius: 50px 50px 0 0;
         }
@@ -295,38 +294,37 @@
     <!-- ナビゲーションバー -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.html">
                 <i class="bi bi-heart-fill text-danger"></i> PetLife
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ホーム</a>
+                        <a class="nav-link" href="./index.html">ホーム</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ペット図鑑</a>
+                        <a class="nav-link" href="./pet-guide-list.html">ペット図鑑</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">飼い方ガイド</a>
+                        <a class="nav-link" href="./pet-care-guide.html">飼い方ガイド</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Q&A</a>
+                        <a class="nav-link" href="./pet-guide-qa.html">Q&A</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">飼育記録</a>
+                        <a class="nav-link active" href="pet-guide-record.html">飼育記録</a>
                     </li>
-                </ul>
-                <button class="btn btn-outline-success ms-3 rounded-pill fw-bold">
+                </ul> 
+                <a href="./pet-guide-login.html" class="btn btn-outline-success ms-3 rounded-pill fw-bold">
                     <i class="bi bi-person-circle"></i> ログイン
-                </button>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- ページヘッダー -->
     <div class="page-header">
         <div class="container">
             <div class="text-center">
@@ -341,7 +339,6 @@
     </div>
 
     <div class="container">
-        <!-- ペットプロフィール -->
         <div class="pet-profile-card">
             <div class="row align-items-center">
                 <div class="col-md-3 text-center mb-3 mb-md-0">
@@ -383,7 +380,6 @@
             </div>
         </div>
 
-        <!-- 統計カード -->
         <div class="row g-4 mb-4">
             <div class="col-md-3 col-sm-6">
                 <div class="stat-card">
@@ -423,7 +419,6 @@
             </div>
         </div>
 
-        <!-- プログレスバー -->
         <div class="row g-4 mb-4">
             <div class="col-md-6">
                 <div class="progress-card">
@@ -484,22 +479,19 @@
         </div>
 
         <div class="row">
-            <!-- 左カラム：健康記録テーブル -->
             <div class="col-lg-8">
-                <!-- アラート -->
                 <div class="alert alert-warning alert-custom" role="alert">
                     <i class="bi bi-exclamation-triangle-fill me-2"></i>
                     <strong>次回のワクチン接種が近づいています！</strong>
                     <p class="mb-0 mt-2">2024年12月15日に年次ワクチン接種の予定です。動物病院の予約をお忘れなく。</p>
                 </div>
 
-                <!-- フィルターボタン -->
                 <div class="record-table">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="fw-bold mb-0" style="color: var(--brown-color);">
                             <i class="bi bi-clipboard2-data"></i> 健康記録一覧
                         </h4>
-                        <button class="btn btn-add-record">
+                        <button class="btn btn-add-record" onclick="location.href ='./pet-guide-form.html'">
                             <i class="bi bi-plus-circle"></i> 記録を追加
                         </button>
                     </div>
@@ -568,39 +560,6 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2024/10/05</td>
-                                    <td><span class="event-badge event-medication">投薬</span></td>
-                                    <td>フィラリア予防薬</td>
-                                    <td>月例投薬完了</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-outline-primary rounded-pill">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2024/09/15</td>
-                                    <td><span class="event-badge event-vaccine">ワクチン</span></td>
-                                    <td>狂犬病ワクチン</td>
-                                    <td>年次接種完了、副作用なし</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-outline-primary rounded-pill">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2024/09/08</td>
-                                    <td><span class="event-badge event-checkup">健康診断</span></td>
-                                    <td>歯科検診</td>
-                                    <td>歯石除去実施、口腔内良好</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-outline-primary rounded-pill">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -621,7 +580,6 @@
                 </div>
             </div>
 
-            <!-- 右カラム：タイムライン -->
             <div class="col-lg-4">
                 <div class="progress-card mb-4">
                     <h5 class="fw-bold mb-4" style="color: var(--brown-color);">
@@ -634,109 +592,7 @@
                         </div>
                         <div class="timeline-date">2時間前</div>
                         <h6 class="fw-bold mb-1">散歩の写真を追加</h6>
-                        <p class="text-muted mb-0 small">ロープトイで大喜び</p>
-                    </div>
-                </div>
-
-                <!-- 体重推移グラフ（簡易版） -->
-                <div class="chart-container">
-                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);">
-                        <i class="bi bi-graph-up-arrow"></i> 体重推移（6ヶ月）
-                    </h5>
-                    <div class="text-center">
-                        <img src="https://placehold.co/350x200/dcfce7/10b981?text=体重推移グラフ" alt="体重推移グラフ" class="img-fluid rounded">
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-6 text-center">
-                            <small class="text-muted d-block">最低体重</small>
-                            <strong class="text-info">7.8kg</strong>
-                        </div>
-                        <div class="col-6 text-center">
-                            <small class="text-muted d-block">最高体重</small>
-                            <strong class="text-danger">8.6kg</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- おすすめアクション -->
-                <div class="progress-card">
-                    <h5 class="fw-bold mb-3" style="color: var(--brown-color);">
-                        <i class="bi bi-lightbulb-fill text-warning"></i> おすすめアクション
-                    </h5>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-outline-success rounded-pill">
-                            <i class="bi bi-camera"></i> 今日の写真を追加
-                        </button>
-                        <button class="btn btn-outline-primary rounded-pill">
-                            <i class="bi bi-calendar-check"></i> 次回検診を予約
-                        </button>
-                        <button class="btn btn-outline-warning rounded-pill">
-                            <i class="bi bi-download"></i> 記録をエクスポート
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- フッター -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3">
-                        <i class="bi bi-heart-fill text-danger"></i> PetLife
-                    </h5>
-                    <p>ペットとの幸せな暮らしを応援する情報サイト</p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="fw-bold mb-3">サイト情報</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">利用規約</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">プライバシー</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="fw-bold mb-3">サポート</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">ヘルプ</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">お問い合わせ</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h6 class="fw-bold mb-3">フォローする</h6>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-light">
-            <p class="text-center mb-0">&copy; 2024 PetLife. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // フィルターボタンの動作
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // 参考になったボタンの動作（将来的な実装用）
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('飼育記録ページが読み込まれました');
-        });
-    </script>
-</body>
-</html>0 small">公園で楽しく遊びました</p>
+                        <p class="text-muted mb-0 small">公園で楽しく遊びました</p>
                     </div>
 
                     <div class="timeline-card">
@@ -772,4 +628,102 @@
                         </div>
                         <div class="timeline-date">3日前</div>
                         <h6 class="fw-bold mb-1">新しいおもちゃ購入</h6>
-                        <p class="text-muted mb-
+                        <p class="text-muted mb-0 small">ロープトイで大喜び</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h5 class="fw-bold mb-4" style="color: var(--brown-color);">
+                        <i class="bi bi-graph-up-arrow"></i> 体重推移（6ヶ月）
+                    </h5>
+                    <div class="text-center">
+                        <img src="https://placehold.co/350x200/dcfce7/10b981?text=体重推移グラフ" alt="体重推移グラフ" class="img-fluid rounded">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6 text-center">
+                            <small class="text-muted d-block">最低体重</small>
+                            <strong class="text-info">7.8kg</strong>
+                        </div>
+                        <div class="col-6 text-center">
+                            <small class="text-muted d-block">最高体重</small>
+                            <strong class="text-danger">8.6kg</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <h5 class="fw-bold mb-3" style="color: var(--brown-color);">
+                        <i class="bi bi-lightbulb-fill text-warning"></i> おすすめアクション
+                    </h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-success rounded-pill">
+                            <i class="bi bi-camera"></i> 今日の写真を追加
+                        </button>
+                        <button class="btn btn-outline-primary rounded-pill">
+                            <i class="bi bi-calendar-check"></i> 次回検診を予約
+                        </button>
+                        <button class="btn btn-outline-warning rounded-pill">
+                            <i class="bi bi-download"></i> 記録をエクスポート
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-heart-fill text-danger"></i> PetLife
+                    </h5>
+                    <p>ペットとの幸せな暮らしを応援する情報サイト</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">サイト情報</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">利用規約</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">プライバシー</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold mb-3">サポート</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">ヘルプ</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">お問い合わせ</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-bold mb-3">フォローする</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://x.com/moriko_iwate" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.instagram.com/therock/" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtu.be/ge3Pj03x8Zw?t=66" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/DwayneJohnson/" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-light">
+            <p class="text-center mb-0">&copy; 2024 PetLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // フィルターボタンの動作
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('飼育記録ページが読み込まれました');
+        });
+    </script>
+</body>
+</html>
